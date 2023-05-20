@@ -48,6 +48,23 @@
                         var experience1SummaryElement = document.getElementById('experience' + index + 'Summary');
                         experience1SummaryElement.innerHTML = experience;
                     }
+
+                    // Add Skills
+                    var skillsList = data['skills'];
+                    var skills = "";
+                    for (var i = 0; i < skillsList.length; i++) {
+                        skills += "<li>" + skillsList[i] + "</li>";
+                    }
+                    var skillElement = document.getElementById('skillsList');
+                    skillElement.innerHTML = skills;
+
+                    // GitHub
+                    var githubElement = document.getElementById('githubProfile');
+                    githubElement.href = data['githubProfile'];
+
+                    // LinkedIn
+                    var linkedInElement = document.getElementById('linkedInProfile');
+                    linkedInElement.href = data['linkedInProfile'];
                 });
         });
     </script>
@@ -228,27 +245,7 @@
 
     <div id="skills">
         <h2 class="heading">Skills</h2>
-        <ul>
-            <li>Java Core</li>
-            <li>Java EE</li>
-            <li>Spring Boot</li>
-            <li>C</li>
-            <li>C++</li>
-            <li>Node.js</li>
-            <li>Hibernate</li>
-            <li>Golang</li>
-            <li>React</li>
-            <li>Python</li>
-            <li>PHP</li>
-            <li>MongoDB</li>
-            <li>MySQL</li>
-            <li>Jenkins</li>
-            <li>Git</li>
-            <li>Docker</li>
-            <li>Bitbucket</li>
-            <li>AWS</li>
-            <li>JIRA</li>
-        </ul>
+        <ul id="skillsList"></ul>
     </div>
     <!-- End #skills -->
 
@@ -269,10 +266,10 @@
                 <div class="col-sm-5 social">
                     <ul>
                         <li>
-                            <a href="https://github.com/vivekkashyap/" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                            <a id="githubProfile" href="https://github.com/vivekkashyap/" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
                         </li>
                         <li>
-                            <a href="https://www.linkedin.com/in/vivek-kashyap-55a86960/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                            <a id="linkedInProfile" href="https://www.linkedin.com/in/vivek-kashyap-55a86960/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
                         </li>
                     </ul>
                 </div>

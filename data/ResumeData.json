@@ -1,5 +1,5 @@
 {
-    "resume":"https://drive.google.com/file/d/1w4WaaFUsy2nwjap5s-X9fR9Ufk6tximh/view",
+    "resume": "https://drive.google.com/file/d/1w4WaaFUsy2nwjap5s-X9fR9Ufk6tximh/view",
     "title": "Software Engineer | Problem Solver | Innovator",
     "summary": "Experienced Software Engineer skilled in developing scalable solutions using Java, Springboot, and MongoDB. Proficient in utilizing AWS services including Lambda, SQS, Kinesis, CloudWatch, API Gateway, ECS, and Parameter Store. Adept at the entire software development lifecycle, from requirements gathering to deployment and maintenance. Passionate about solving complex challenges and staying ahead in the ever-changing tech landscape. Seeking opportunities to contribute to innovative teams and deliver impactful solutions. Let's connect and discuss how I can bring value to your organization",
     "experience": [
@@ -37,5 +37,28 @@
                 "M -> MongoDB, E -> ExpressJS, R -> ReactJS, N -> NodeJS"
             ]
         }
-    ]
+    ],
+    "skills": [
+        "Java Core",
+        "Java EE",
+        "Spring Boot",
+        "C",
+        "C++",
+        "Node.js",
+        "Hibernate",
+        "Golang",
+        "React",
+        "Python",
+        "PHP",
+        "MongoDB",
+        "MySQL",
+        "Jenkins",
+        "Git",
+        "Docker",
+        "Bitbucket",
+        "AWS",
+        "JIRA"
+    ],
+    "linkedInProfile": "https://www.linkedin.com/in/vvekkashyap/",
+    "githubProfile": "https://github.com/vivekkashyap/"
 }
