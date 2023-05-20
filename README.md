@@ -1,8 +1,5 @@
 # vivekkashyap.github.io
 
-This is my small portfolio.
-It contains my education, past experiences and my projects.
+This is my small portfolio. It contains my education, past experiences, skills and my projects.
 
-Thank you for your time
-
-Have a nice day! :)
+Thanks to @RyanFitzgerald for provided such a great portfolio.
