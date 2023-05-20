@@ -65,6 +65,30 @@
                     // LinkedIn
                     var linkedInElement = document.getElementById('linkedInProfile');
                     linkedInElement.href = data['linkedInProfile'];
+
+                    // Projects
+                    var projectList = data['project'];
+                    for (var i = 0; i < projectList.length; i++) {
+                        var index = i + 1;
+
+                        // Adding Name
+                        var nameElement = document.getElementById('project' + index + 'name');
+                        nameElement.textContent = projectList[i].name;
+
+                        // Addding link
+                        var linkElement = document.getElementById('project' + index + 'link');
+                        linkElement.href = projectList[i].link;
+
+                        // Adding Description
+                        var descList = projectList[i].desc;
+                        var desc = "<ul>";
+                        for (var j = 0; j < descList.length; j++) {
+                            desc += "<li>" + descList[j] + "</li>";
+                        }
+                        desc += "</ul>";
+                        var descElement = document.getElementById('project' + index + 'desc');
+                        descElement.innerHTML = desc;
+                    }
                 });
         });
     </script>
@@ -194,12 +218,9 @@
                     </div>
                     <!-- End .project-image -->
                     <div class="project-info">
-                        <h3>Weather App | React-App | Node js</h3>
-                        <p style="text-align: left; margin-left: 8%;">
-                            It is an app which shows the weather information. <br>
-                            Technology used are React JS, Node JS, and API for getting wheather information
-                        </p>
-                        <a href="https://github.com/vivekkashyap" target="_blank">View Project</a>
+                        <h3 id="project1name"></h3>
+                        <p id="project1desc" style="text-align: left; margin-left: 8%;"></p>
+                        <a id="project1link" href="" target="_blank">View Project</a>
                     </div>
                     <!-- End .project-info -->
                 </div>
@@ -211,11 +232,11 @@
                     </div>
                     <!-- End .project-image -->
                     <div class="project-info">
-                        <h3>Visitor Management System | Using Servlet</h3>
-                        <p style="text-align: left; margin-left: 8%;">
+                        <h3 id="project2name">Visitor Management System | Using Servlet</h3>
+                        <p id="project2desc" style="text-align: left; margin-left: 8%;">
                             Visitor management systems allow organizations to streamline the check-in process for visitors. This project is made in servlet using MVC Framework HTML, CSS, JS are used for front-end management and MYSQL is used as a back-end.
                         </p>
-                        <a href="https://vivekkashyap.github.io/VIS/" target="_blank">View Project</a>
+                        <a id="project2link" href="" target="_blank">View Project</a>
                     </div>
                     <!-- End .project-info -->
                 </div>
@@ -227,13 +248,9 @@
                     </div>
                     <!-- End .project-image -->
                     <div class="project-info">
-                        <h3>Online Shopping Website | Using Servlet</h3>
-                        <p style="text-align: left; margin-left: 8%;">
-                            Online Shopping System helps in buying goods, products, and services online by choosing the listed products from the website.
-                            This project is made in servlet using MVC Framework. HTML, CSS, JS are used for front-end management and MYSQL is used as a back end.
-                            Payment gateway is made using Paytm API.
-                        </p>
-                        <a href="https://vivekkashyap.github.io/shopping-website/" target="_blank">View Project</a>
+                        <h3 id="project3name"></h3>
+                        <p id="project3desc" style="text-align: left; margin-left: 8%;"></p>
+                        <a id="project3link" href="" target="_blank">View Project</a>
                     </div>
                     <!-- End .project-info -->
                 </div>
