@@ -1,0 +1,40 @@
+{
+    "title": "Software Engineer | Problem Solver | Innovator",
+    "summary": "Experienced Software Engineer skilled in developing scalable solutions using Java, Springboot, and MongoDB. Proficient in utilizing AWS services including Lambda, SQS, Kinesis, CloudWatch, API Gateway, ECS, and Parameter Store. Adept at the entire software development lifecycle, from requirements gathering to deployment and maintenance. Passionate about solving complex challenges and staying ahead in the ever-changing tech landscape. Seeking opportunities to contribute to innovative teams and deliver impactful solutions. Let's connect and discuss how I can bring value to your organization",
+    "experience": [
+        {
+            "designation": "Software Engineer",
+            "organisation": "Monocept",
+            "startDate": "October 2021",
+            "endDate": "Present",
+            "summary": [
+                "Created and Implemented new APIs for business requirement, I was responsible for coding and testing the same.",
+                "Collaborated with the team for brainstorming solutions to problems.",
+                "Launched service in spring boot, Responsible for coding, and testing of the same.",
+                "Technologies Used: Java, Spring Boot, AWS, MongoDB, Git, Jenkins, React, Node"
+            ]
+        },
+        {
+            "designation": "Test Engineer",
+            "organisation": "Infosys",
+            "startDate": "November 2020",
+            "endDate": "October 2021",
+            "summary": [
+                "Involved in Cards Payment-based DevOps Project on Network Processing.",
+                "Automated the test case with Java, for the reliability of the system.",
+                "Technologies Used: Java, Golang, Docker, Kubernetes, Bitbucket, and in-house Automated Tools."
+            ]
+        },
+        {
+            "designation": "System Engineer Trainee",
+            "organisation": "Infosys",
+            "startDate": "February 2020",
+            "endDate": "March 2020",
+            "summary": [
+                "Trained in Java Core, MY-SQL, Hibernate, JPA",
+                "Internship in MERN Technology at Infosys.",
+                "M -> MongoDB, E -> ExpressJS, R -> ReactJS, N -> NodeJS"
+            ]
+        }
+    ]
+}

@@ -5,8 +5,48 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Vivek Kashyap | Software Engineer</title>
+    <title id="pageTitle">Vivek Kashyap | Software Engineer</title>
 	<link rel="icon" type="image/png" href="icon.png" />
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            fetch('./data/ResumeData.json') // Replace "data.json" with the URL of your external JSON file
+                .then(response => response.json())
+                .then(data => {
+                    
+                    // Title
+                    var titleElement = document.getElementById('title');
+                    titleElement.textContent = data['title'];
+
+                    // Summary
+                    var summaryElement = document.getElementById('summary');
+                    summaryElement.textContent = data['summary'];
+
+                    // Experience 1
+                    var experienceList = data['experience'];
+                    for (var i = 0; i < experienceList.length; i++) {
+                        var index = i + 1;
+
+                        // Adding Designation
+                        var designationElement = document.getElementById('experience' + index + 'designation');
+                        designationElement.textContent = experienceList[i].designation;
+
+                        // Addding Organisation
+                        var organisationElement = document.getElementById('experience' + index + 'organisation');
+                        organisationElement.textContent = experienceList[i].organisation;
+
+                        // Adding Summary
+                        var experienceSummaryList = experienceList[i].summary;
+                        var experience = "<ul>";
+                        for (var j = 0; j < experienceSummaryList.length; j++) {
+                            experience += "<li>" + experienceSummaryList[j] + "</li>";
+                        }
+                        experience += "</ul>";
+                        var experience1SummaryElement = document.getElementById('experience' + index + 'Summary');
+                        experience1SummaryElement.innerHTML = experience;
+                    }
+                });
+        });
+    </script>
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
     <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -45,7 +85,7 @@
     <div id="lead">
         <div id="lead-content">
             <h1>Vivek Kashyap</h1>
-            <h2>Software Engineer</h2>
+            <h2 id="title"></h2>
             <a href="https://drive.google.com/file/d/1w4WaaFUsy2nwjap5s-X9fR9Ufk6tximh/view" target="_blank" class="btn-rounded-white" >Download Resume</a>
         </div>
         <!-- End #lead-content -->
@@ -68,9 +108,7 @@
                     <h2 class="heading">About Me</h2>
                 </div>
                 <div class="col-md-8">
-                    <p>
-                        I'm a Software Engineer who has experience building projects and web applications. I'm a quick learner and passionate about development and brings the best experience to the users.
-                    </p>
+                    <p id="summary"></p>
                 </div>
             </div>
         </div>
@@ -81,36 +119,21 @@
         <h2 class="heading">Experience</h2>
         <div id="experience-timeline">
             <div data-date="October 2021 – Present">
-                <h3>Software Engineer</h3>
-                <h4>Monocept</h4>
-                <p>
-                    - Created and Implemented new APIs for business requirement, I was responsible for coding and testing the same. <br>
-                    - Collaborated with the team for brainstorming solutions to problems. <br>
-                    - Launched service in spring boot, Responsible for coding, and testing of the same. <br>
-                    - Technologies Used: Java, Spring Boot, AWS, MongoDB, Git, Jenkins, React, Node <br>
-                </p>
+                <h3 id="experience1designation"></h3>
+                <h4 id="experience1organisation"></h4>
+                <p id="experience1Summary"></p>
             </div>
 
             <div data-date="November 2020 – October 2021">
-                <h3>Test Engineer</h3>
-                <h4>Infosys</h4>
-                <p>
-                    - Involved in Cards Payment-based DevOps Project on Network Processing. <br>
-                    - Automated the test case with Java, for the reliability of the system. <br>
-                    - Technologies Used: Java, Golang, Docker, Kubernetes, Bitbucket, and in-house Automated Tools.
-                </p>
+                <h3 id="experience2designation"></h3>
+                <h4 id="experience2organisation"></h4>
+                <p id="experience2Summary"></p>
             </div>
 
             <div data-date="February 2020 – March 2020">
-                <h3>System Engineer Trainee</h3>
-                <h4>Infosys</h4>
-                <p>
-                    - Trained in Java Core, MY-SQL, Hibernate, JPA <br>
-                    - Internship in MERN Technology at Infosys. <br>
-                    M -> MongoDB, <br>
-                    E -> ExpressJS, <br>
-                    R -> ReactJS, <br>
-                </p>
+                <h3 id="experience3designation"></h3>
+                <h4 id="experience3organisation"></h4>
+                <p id="experience3Summary"></p>
             </div>
         </div>
     </div>
